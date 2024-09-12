@@ -1,0 +1,3 @@
+I printed "Printing to kernel space" in main.c inside the mpmain function because I couldn't print in the bootmain.c file. 
+
+I know this is in kernel space because it prints on the boot up of xv6. Since the boot is handled by the kernel that means this was printed to the kernel.
