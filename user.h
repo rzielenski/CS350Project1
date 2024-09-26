@@ -25,6 +25,8 @@ int sleep(int);
 int uptime(void);
 int uptime2(int);
 void shutdown(void);
+int exit2(int status);
+void shutdown2(char*);
 
 // ulib.c
 int stat(char*, struct stat*);

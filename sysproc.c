@@ -122,3 +122,23 @@ sys_uptime2(void)
 
   return xticks;
 }
+
+int sys_exit2(int status){
+  argint(0, &status);
+  cprintf("Exit status: %d\n", status);
+  exit();
+  return 0;
+}
+
+int
+sys_shutdown2(void)
+{
+  char * msg;
+  if (argstr(0, &msg) <0)
+    return -1;
+  cprintf("%s", msg);
+  cprintf("\n");
+  outw(0xB004, 0x0|0x2000);
+  outw(0x604, 0x0|0x2000);
+  return 0;
+}
