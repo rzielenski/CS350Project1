@@ -23,6 +23,7 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+int uptime2(void);
 void shutdown(void);
 
 // ulib.c

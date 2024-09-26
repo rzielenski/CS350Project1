@@ -97,3 +97,14 @@ sys_shutdown(void)
 	outw(0x604, 0x0|0x2000);
 	return 0;
 }
+
+int
+sys_uptime2(void)
+{
+  uint xticks;
+
+  acquire(&tickslock);
+  xticks = ticks;
+  release(&tickslock);
+  return xticks;
+}
