@@ -24,7 +24,7 @@ main(int argc, char * argv[])
     
     // "msg" now holds the shutdown message provided by the user
     //shutdown2(msg);
-	/*
+	
     if(i<1 || i>3)
         printf(1,"Available options for uptime output: \n[\n1=seconds,\n2=days,\n3=years\n]");
     
@@ -37,6 +37,6 @@ main(int argc, char * argv[])
     } else if(i == 3){
         printf(1, "Current Uptime in minutes: %d", ut);
     }
-		*/
+		
     exit(); //return 0;
 }
