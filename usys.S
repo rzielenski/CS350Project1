@@ -33,4 +33,4 @@ SYSCALL(shutdown)
 SYSCALL(mkdir2)
 SYSCALL(uptime2)
 SYSCALL(exit2)
-
+SYSCALL(shutdown2)
