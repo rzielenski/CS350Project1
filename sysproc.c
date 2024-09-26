@@ -108,3 +108,10 @@ sys_uptime2(void)
   release(&tickslock);
   return xticks;
 }
+
+int sys_exit2(int status){
+  argint(0, &status);
+  cprintf("Exit status: %d\n", status);
+  exit();
+  return 0;
+}
