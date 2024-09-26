@@ -102,9 +102,23 @@ int
 sys_uptime2(void)
 {
   uint xticks;
-
+  int arg;
+  if (argint(0, &arg) < 0) {
+    return -1;
+  }
   acquire(&tickslock);
   xticks = ticks;
   release(&tickslock);
+  if (arg == 1)  {
+    return xticks;
+  }
+  if (arg == 2) {
+    return xticks/60;
+  }
+  if (arg == 3) {
+    return xticks / 6000;
+  }
+
+
   return xticks;
 }
