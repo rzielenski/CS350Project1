@@ -9,9 +9,7 @@
 
 //#define STUB_FUNCS
 #ifdef STUB_FUNCS
-void mkdir2(char * d1, char* d2) {
-	return syscall(SYS_mkdir2, d1, d2);
-}
+void mkdir2(char * d1, char* d2) {}
 #endif
 
 
