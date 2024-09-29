@@ -123,7 +123,8 @@ sys_uptime2(void)
   return xticks;
 }
 
-int sys_exit2(int status){
+int sys_exit2(void){
+  int status;
   argint(0, &status);
   cprintf("Exit status: %d\n", status);
   exit();
